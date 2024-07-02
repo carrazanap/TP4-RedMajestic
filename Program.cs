@@ -24,6 +24,8 @@ class Program
             if (!validLengthCard(cardNumber))
             {
                 Console.WriteLine("No ingreso los 16 dígitos de su tarjeta de credito. Inténtelo nuevamente más tarde.");
+                Console.WriteLine("El programa ha terminado. Presiona cualquier tecla para salir...");
+                Console.ReadKey();
                 return;
             }
             // Extrae primeros 4 caracteres de la tarjeta, el identificador       
@@ -32,6 +34,8 @@ class Program
             if (!validCard(option,idCompany))
             {
                 Console.WriteLine("La opción ingresada no es válida. Inténtelo nuevamente más tarde.");
+                Console.WriteLine("El programa ha terminado. Presiona cualquier tecla para salir...");
+                Console.ReadKey();
                 return;
             }
             // Extrae ultimos 4 caracteres de la tarjeta ingresada
@@ -47,6 +51,8 @@ class Program
                         Console.WriteLine($"Transacción N°{numberT+1} - Monto ${ArrayTransactions[numberT]}");
                         numberT ++;
                     }
+                    Console.WriteLine("El programa ha terminado. Presiona cualquier tecla para salir...");
+                    Console.ReadKey();
                     return;
                 case 2:
                     Console.WriteLine($"Movimientos de su cuenta Mastercard terminada en ..{lastNumbers}");
@@ -58,6 +64,8 @@ class Program
                         numberT ++;
                     }
                     while(numberT < 5);
+                    Console.WriteLine("El programa ha terminado. Presiona cualquier tecla para salir...");
+                    Console.ReadKey();
                     return;
                 case 3:
                     Console.WriteLine($"Movimientos de su cuenta Diners Club terminada en ..{lastNumbers}");
@@ -66,6 +74,8 @@ class Program
                     {
                         Console.WriteLine($"Transacción N°{item.Key} - Monto ${item.Value}");
                     }
+                    Console.WriteLine("El programa ha terminado. Presiona cualquier tecla para salir...");
+                    Console.ReadKey();
                     return;
                 default:
                     break;
