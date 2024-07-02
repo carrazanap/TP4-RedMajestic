@@ -1,0 +1,14 @@
+/files/Documents/ESCMB/2A/PROGRAMACIÓN APLICADA I/TP4/TP4-RedMajestic/TP4-RedMajestic/bin/Debug/net8.0/TP4-RedMajestic
+/files/Documents/ESCMB/2A/PROGRAMACIÓN APLICADA I/TP4/TP4-RedMajestic/TP4-RedMajestic/bin/Debug/net8.0/TP4-RedMajestic.dll
+/files/Documents/ESCMB/2A/PROGRAMACIÓN APLICADA I/TP4/TP4-RedMajestic/TP4-RedMajestic/bin/Debug/net8.0/TP4-RedMajestic.pdb
+/files/Documents/ESCMB/2A/PROGRAMACIÓN APLICADA I/TP4/TP4-RedMajestic/TP4-RedMajestic/obj/Debug/net8.0/TP4-RedMajestic.GeneratedMSBuildEditorConfig.editorconfig
+/files/Documents/ESCMB/2A/PROGRAMACIÓN APLICADA I/TP4/TP4-RedMajestic/TP4-RedMajestic/obj/Debug/net8.0/TP4-RedMajestic.AssemblyInfoInputs.cache
+/files/Documents/ESCMB/2A/PROGRAMACIÓN APLICADA I/TP4/TP4-RedMajestic/TP4-RedMajestic/obj/Debug/net8.0/TP4-RedMajestic.AssemblyInfo.cs
+/files/Documents/ESCMB/2A/PROGRAMACIÓN APLICADA I/TP4/TP4-RedMajestic/TP4-RedMajestic/obj/Debug/net8.0/TP4-RedMajestic.csproj.CoreCompileInputs.cache
+/files/Documents/ESCMB/2A/PROGRAMACIÓN APLICADA I/TP4/TP4-RedMajestic/TP4-RedMajestic/obj/Debug/net8.0/TP4-RedMajestic.dll
+/files/Documents/ESCMB/2A/PROGRAMACIÓN APLICADA I/TP4/TP4-RedMajestic/TP4-RedMajestic/obj/Debug/net8.0/refint/TP4-RedMajestic.dll
+/files/Documents/ESCMB/2A/PROGRAMACIÓN APLICADA I/TP4/TP4-RedMajestic/TP4-RedMajestic/obj/Debug/net8.0/TP4-RedMajestic.pdb
+/files/Documents/ESCMB/2A/PROGRAMACIÓN APLICADA I/TP4/TP4-RedMajestic/TP4-RedMajestic/bin/Debug/net8.0/TP4-RedMajestic.deps.json
+/files/Documents/ESCMB/2A/PROGRAMACIÓN APLICADA I/TP4/TP4-RedMajestic/TP4-RedMajestic/bin/Debug/net8.0/TP4-RedMajestic.runtimeconfig.json
+/files/Documents/ESCMB/2A/PROGRAMACIÓN APLICADA I/TP4/TP4-RedMajestic/TP4-RedMajestic/obj/Debug/net8.0/TP4-RedMajestic.genruntimeconfig.cache
+/files/Documents/ESCMB/2A/PROGRAMACIÓN APLICADA I/TP4/TP4-RedMajestic/TP4-RedMajestic/obj/Debug/net8.0/ref/TP4-RedMajestic.dll
