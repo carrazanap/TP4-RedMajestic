@@ -1,5 +1,6 @@
 ﻿using System.Net.NetworkInformation;
 using System.Runtime.CompilerServices;
+using System.Text.RegularExpressions;
 
 class Program
 {
@@ -14,27 +15,31 @@ class Program
             // Valida que la opcion sea entero y una opcion correcta
             if (!(int.TryParse(optionStr, out option) && (option == 1 || option == 2 || option == 3)))
             {
+                Console.Clear();
                 Console.WriteLine("La opcion no es valida. Inténtelo nuevamente.");
                 continue;  
             }             
             Console.Clear();
+            Console.WriteLine();
             Console.WriteLine("Ingrese los 16 dígitos de su tarjeta de credito: ");
             string cardNumber = Console.ReadLine();
             // Valida que se ingresen los 16 digitos de la tarjeta
             if (!validLengthCard(cardNumber))
             {
-                Console.WriteLine("No ingreso los 16 dígitos de su tarjeta de credito. Inténtelo nuevamente más tarde.");
-                Console.WriteLine("Gracias por operar con Red Majestic. Presiona cualquier tecla para salir...");
+                Console.WriteLine();
+                Console.WriteLine("La tarjeta ingresada no es válida. Inténtelo nuevamente más tarde.");
+                Console.WriteLine("Presiona cualquier tecla para salir...");
                 Console.ReadKey();
-                return;
+                break;
             }
             // Extrae primeros 4 caracteres de la tarjeta, el identificador       
             string idCompany = cardNumber.Substring(0, 4);
             // Valida que la opcion y el id de la tarjeta sean correctas
             if (!validCard(option,idCompany))
             {
+                Console.WriteLine();
                 Console.WriteLine("La opción ingresada no es válida. Inténtelo nuevamente más tarde.");
-                Console.WriteLine("Gracias por operar con Red Majestic. Presiona cualquier tecla para salir...");
+                Console.WriteLine("Presiona cualquier tecla para salir...");
                 Console.ReadKey();
                 return;
             }
@@ -44,6 +49,7 @@ class Program
             {
                 case 1:
                     Console.WriteLine($"Movimientos de su cuenta Visa terminada en ..{lastNumbers}");
+                    Console.WriteLine();
                     float[] ArrayTransactions = loadTransactionsVisa(idCompany);
                     int numberT = 0;
                     while(numberT < 5)
@@ -51,11 +57,19 @@ class Program
                         Console.WriteLine($"Transacción N°{numberT+1} - Monto ${ArrayTransactions[numberT]}");
                         numberT ++;
                     }
-                    Console.WriteLine("Gracias por operar con Red Majestic. Presiona cualquier tecla para salir...");
-                    Console.ReadKey();
-                    return;
+                    Console.WriteLine();
+                    Console.WriteLine("Gracias por operar con Red Majestic.");
+                    Console.WriteLine("Presione 0 para realizar otra consulta o cualquier tecla para salir...");
+                    if (Console.ReadKey().Key == ConsoleKey.D0)
+                    {
+                        Console.Clear();
+                        continue;
+                    }
+                    else 
+                        return;
                 case 2:
                     Console.WriteLine($"Movimientos de su cuenta Mastercard terminada en ..{lastNumbers}");
+                    Console.WriteLine();
                     List<float> listTransactions = loadTransactionsMarterCard(idCompany);
                     numberT = 0;
                     do
@@ -64,19 +78,34 @@ class Program
                         numberT ++;
                     }
                     while(numberT < 5);
-                    Console.WriteLine("Gracias por operar con Red Majestic. Presiona cualquier tecla para salir...");
-                    Console.ReadKey();
-                    return;
+                    Console.WriteLine();
+                    Console.WriteLine("Gracias por operar con Red Majestic.");
+                    Console.WriteLine("Presione 0 para realizar otra consulta o cualquier tecla para salir...");
+                    if (Console.ReadKey().Key == ConsoleKey.D0)
+                    {
+                        Console.Clear();
+                        continue;
+                    }
+                    else 
+                        return;
                 case 3:
                     Console.WriteLine($"Movimientos de su cuenta Diners Club terminada en ..{lastNumbers}");
+                    Console.WriteLine();
                     Dictionary<int, float> dictTransactions = loadTransactionsDiners(idCompany);
                     foreach (var item in dictTransactions)
                     {
                         Console.WriteLine($"Transacción N°{item.Key} - Monto ${item.Value}");
                     }
-                    Console.WriteLine("Gracias por operar con Red Majestic. Presiona cualquier tecla para salir...");
-                    Console.ReadKey();
-                    return;
+                    Console.WriteLine();
+                    Console.WriteLine("Gracias por operar con Red Majestic.");
+                    Console.WriteLine("Presione 0 para realizar otra consulta o cualquier tecla para salir...");
+                    if (Console.ReadKey().Key == ConsoleKey.D0)
+                    {
+                        Console.Clear();
+                        continue;
+                    }
+                    else 
+                        return;
                 default:
                     break;
             }
@@ -148,8 +177,10 @@ class Program
     {
         bool flag = false;
 
-        if( cardNumber.Length == 16)
+        //if( cardNumber.Length == 16 &&  int.TryParse(cardNumber, out int num))
+        if( cardNumber.Length == 16 &&  Regex.IsMatch(cardNumber,@"^\d{16}$"))
             flag = true;
+        //if( cardNumber.Length == 16)
         return flag;
     }
 
