@@ -14,7 +14,7 @@ class Program
             // Valida que la opcion sea entero y una opcion correcta
             if (!(int.TryParse(optionStr, out option) && (option == 1 || option == 2 || option == 3)))
             {
-                Console.WriteLine("No ingreso una opción permitida. Inténtelo nuevamente.");
+                Console.WriteLine("La opcion no es valida. Inténtelo nuevamente.");
                 continue;  
             }             
             Console.Clear();
