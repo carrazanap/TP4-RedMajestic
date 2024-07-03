@@ -24,7 +24,7 @@ class Program
             if (!validLengthCard(cardNumber))
             {
                 Console.WriteLine("No ingreso los 16 dígitos de su tarjeta de credito. Inténtelo nuevamente más tarde.");
-                Console.WriteLine("El programa ha terminado. Presiona cualquier tecla para salir...");
+                Console.WriteLine("Gracias por operar con Red Majestic. Presiona cualquier tecla para salir...");
                 Console.ReadKey();
                 return;
             }
@@ -34,7 +34,7 @@ class Program
             if (!validCard(option,idCompany))
             {
                 Console.WriteLine("La opción ingresada no es válida. Inténtelo nuevamente más tarde.");
-                Console.WriteLine("El programa ha terminado. Presiona cualquier tecla para salir...");
+                Console.WriteLine("Gracias por operar con Red Majestic. Presiona cualquier tecla para salir...");
                 Console.ReadKey();
                 return;
             }
@@ -51,7 +51,7 @@ class Program
                         Console.WriteLine($"Transacción N°{numberT+1} - Monto ${ArrayTransactions[numberT]}");
                         numberT ++;
                     }
-                    Console.WriteLine("El programa ha terminado. Presiona cualquier tecla para salir...");
+                    Console.WriteLine("Gracias por operar con Red Majestic. Presiona cualquier tecla para salir...");
                     Console.ReadKey();
                     return;
                 case 2:
@@ -64,7 +64,7 @@ class Program
                         numberT ++;
                     }
                     while(numberT < 5);
-                    Console.WriteLine("El programa ha terminado. Presiona cualquier tecla para salir...");
+                    Console.WriteLine("Gracias por operar con Red Majestic. Presiona cualquier tecla para salir...");
                     Console.ReadKey();
                     return;
                 case 3:
@@ -74,7 +74,7 @@ class Program
                     {
                         Console.WriteLine($"Transacción N°{item.Key} - Monto ${item.Value}");
                     }
-                    Console.WriteLine("El programa ha terminado. Presiona cualquier tecla para salir...");
+                    Console.WriteLine("Gracias por operar con Red Majestic. Presiona cualquier tecla para salir...");
                     Console.ReadKey();
                     return;
                 default:
